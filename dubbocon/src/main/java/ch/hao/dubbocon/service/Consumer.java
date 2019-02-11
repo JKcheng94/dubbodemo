@@ -1,5 +1,6 @@
 package ch.hao.dubbocon.service;
 
+import ch.cheng.dubbopro.DTO.User;
 import ch.cheng.dubbopro.service.UserService;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Component;
@@ -18,5 +19,9 @@ public class Consumer {
     
     public void saveUser(String str){
         userService.saveUser(str);
+    }
+    
+    public void soutUser(User user){
+        userService.soutUser(user);
     }
 }

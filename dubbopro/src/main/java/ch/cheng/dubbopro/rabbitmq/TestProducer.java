@@ -4,6 +4,8 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -19,7 +21,10 @@ public class TestProducer {
     private AmqpTemplate amqpTemplate;
     
     public String send(String msg){
-        String content = msg + "-----Date:" + new Date();
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
+        String dateStr = sdf.format(date);
+        String content = msg + "-----Date:" + dateStr;
         System.out.println("生产者1------" + content);
         amqpTemplate.convertAndSend("chenghao",content);
         return content;

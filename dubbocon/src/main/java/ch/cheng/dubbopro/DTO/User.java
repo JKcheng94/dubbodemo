@@ -3,7 +3,7 @@ package ch.cheng.dubbopro.DTO;
 import java.io.Serializable;
 
 /**
- * @Copyright (C) 2018
+ * @Copyright (C) 2018 
  * @Description: TODO
  * @Author dp_blue
  * @Date 2018-10-19 17:47

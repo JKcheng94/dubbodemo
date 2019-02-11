@@ -1,5 +1,6 @@
 package ch.hao.dubbocon.controller;
 
+import ch.cheng.dubbopro.DTO.User;
 import ch.hao.dubbocon.service.Consumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +23,14 @@ public class TestConsumer {
         
         String str = "++++++++++++dubbotest++++++++++++";
         consumer.saveUser(str);
+    }
+    
+    @RequestMapping("/soutUser")
+    public void soutUser(){
+        User user = new User();
+        user.setAge(25);
+        user.setId(777);
+        user.setName("AK94");
+        consumer.soutUser(user);
     }
 }

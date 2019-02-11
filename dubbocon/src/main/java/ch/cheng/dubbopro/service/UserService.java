@@ -1,5 +1,8 @@
 package ch.cheng.dubbopro.service;
 
+
+import ch.cheng.dubbopro.DTO.User;
+
 /**
  * @Copyright (C) 2018 
  * @Description: TODO
@@ -8,4 +11,6 @@ package ch.cheng.dubbopro.service;
  */
 public interface UserService {
     void saveUser(String str);
+    
+    void soutUser(User user);
 }
